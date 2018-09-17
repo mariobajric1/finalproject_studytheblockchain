@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medical Records</title>
+    <link rel="stylesheet" type="text/css" href="css/utility.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class='name'>MyDoctor</h1>
+        <hr class='bold2'>
+
+        <div class="row">
+            <div class="col-md-4">
+
+                <h2>Insert your Medical Record Information</h2>
+                <div id="errors"></div>
+                <div>
+                    <div id='conditionsDiv'>
+                        <h4>Select Your Medical Conditions</h4>
+                        <button class='B btn btn-light' id='conds' value='Asthma (Last Attack: MM/DD/YYYY)'>Asthma</button>
+                        <button class='B btn btn-light' id='conds2' value='Diabetes: (Explanation)'>Diabetes</button>
+                        <button class='B btn btn-light' id='conds3' value='Hypertension: (Explanation)'>Hypertension</button>
+                        <button class='B btn btn-light' id='conds4' value='Heart Disease: (Explanation)'>Heart Disease</button>
+                        <button class='B btn btn-light' id='conds5' value='Strokes: (Explanation)'>Strokes</button>
+                        <button class='B btn btn-light' id='conds6' value='Lung Disease: (Explanation)'>Lung Disease</button>
+                        <button class='B btn btn-light' id='conds7' value='Ear/Sinus Problems: (Explanation)'>Ear/Sinus Problems</button>
+                        <button class='B btn btn-light' id='conds8' value='Muscular/Skeletal Condition: (Explanation)'>Muscular/Skeletal Condition</button>
+                        <button class='B btn btn-light' id='conds9' value='Mentral Problems: (Explanation)'>Mentral Problems (Women)</button>
+                        <button class='B btn btn-light' id='conds10' value='Psychiatric/Emotional Difficulties: (Explanation)'>Psychiatric/Emotional Difficulties</button>
+                        <button class='B btn btn-light' id='conds11' value='Behavioral Disorders: (Explanation)'>Behavioral Disorders</button>
+                        <button class='B btn btn-light' id='conds12' value='Bleeding Disorders: (Explanation)'>Bleeding Disorders</button>
+                        <button class='B btn btn-light' id='conds13' value='Faint Spells: (Explanation)'>Faint Spells</button>
+                        <button class='B btn btn-light' id='conds14' value='Thyroid Disease: (Explanation)'>Thyroid Disease</button>
+                        <button class='B btn btn-light' id='conds15' value='Kidney Disease: (Explanation)'>Kidney Disease</button>
+                        <button class='B btn btn-light' id='conds16' value='Sickle Cell Disease: (Explanation)'>Sickle Cell Disease</button>
+                        <button class='B btn btn-light' id='conds17' value='Seizures: (Explanation)'>Seizures</button>
+                        <button class='B btn btn-light' id='conds18' value='Sleep Disorders: (Explanation)'>Sleep Disorders</button>
+                        <button class='B btn btn-light' id='conds19' value='Abdominal/Digestive Problems: (Explanation)'>Abdominal/Digestive Problems</button>
+                        <button class='B btn btn-light' id='conds20' value='Surgery: (Explanation)'>Surgery</button>
+                        <button class='B btn btn-light' id='conds21' value='Serious Injury: (Explanation)'>Serious Injury</button>
+                        <button class='B btn btn-light' id='conds22' value='Other: (Explanation)'>Other</button>
+                        <textarea contenteditable="true" id="conditions" type="text"></textarea>
+                    </div>
+
+                    <div id='immunizationsDiv'>
+                        <h4>Immunization Information</h4>
+                        <button class='I btn btn-light' id='imm' value='Tetanus (MM/DD/YYYY)'>Tetanus</button>
+                        <button class='I btn btn-light' id='imm2' value='Pertussis (MM/DD/YYYY)'>Pertussis</button>
+                        <button class='I btn btn-light' id='imm3' value='Diphtheria (MM/DD/YYYY)'>Diphtheria</button>
+                        <button class='I btn btn-light' id='imm4' value='Measles (MM/DD/YYYY)'>Measles</button>
+                        <button class='I btn btn-light' id='imm5' value='Mumps (MM/DD/YYYY)'>Mumps</button>
+                        <button class='I btn btn-light' id='imm6' value='Rubella (MM/DD/YYYY)'>Rubella</button>
+                        <button class='I btn btn-light' id='imm7' value='Polio (MM/DD/YYYY)'>Polio</button>
+                        <button class='I btn btn-light' id='imm8' value='Chicken Pox (MM/DD/YYYY)'>Chicken Pox</button>
+                        <button class='I btn btn-light' id='imm9' value='Hepatitis A (MM/DD/YYYY)'>Hepatitis A</button>
+                        <button class='I btn btn-light' id='imm10' value='Hepatitis B (MM/DD/YYYY)'>Hepatitis B</button>
+                        <button class='I btn btn-light' id='imm11' value='Influenza (MM/DD/YYYY)'>Influenza</button>
+                        <button class='I btn btn-light' id='imm12' value='Other: (MM/DD/YYYY)'>Other</button>
+                        <textarea contenteditable="true" id="immunizations" type="text"></textarea>
+                    </div>
+
+                    <div id='meds'>
+                        <h4>Medications and Allergies</h4>
+
+                        <div class='med'>
+                            <button id='M' class='M btn btn-light' Value='(Medication): (Strength)(Frequency)(Reason)(Start Date: MM/DD/YYYY)'>Add Current Medication</button>
+                            <button id='A' class='A btn btn-light' Value='Allergies: '>Add Allergies</button>
+                            <textarea contenteditable="true" id="medications" type="text"></textarea>
+                        </div>
+                        <br>
+                        <button class ='btn btn-light' id="submitRecord">Create Record</button>
+                    </div>
+
+                </div>
+
+                <div class="col-xl-4">
+                    <div id="transactions">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <hr class='bold'>
+
+                <h2>Retrieve your Medical Record's Information</h2>
+                <div class="col-md-4">
+                    <form>
+                        <label for="record_id" class="control-label">Record ID</label>
+                        <input id="record_id" type="text">
+
+                        <button class='btn btn-light' id="getRecord">Get this record</button>
+                    </form>
+                </div>
+                <div id='list' style="display: none">
+                    <div id='list2'>
+                    <div class="col-xl-4" id="record">
+                    </div>
+                    <div class="col-xl-4" id="record1">
+                    </div>
+                    <div class="col-xl-4" id="record2">
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <hr class='bold'>
+
+                <h2>Update your Medical Record</h2>
+                <div id="errors"></div>
+
+                <label for="update_record_id" class="control-label">Enter your Record Address</label>
+                <input id="update_record_id" type="text">
+                <div id='conditionsDiv2'>
+                    <h4>Select Your Medical Conditions</h4>
+                    <button class='B2 btn btn-light' id='1conds' value='Asthma (Last Attack: MM/DD/YYYY)'>Asthma</button>
+                    <button class='B2 btn btn-light' id='1conds2' value='Diabetes: (Explanation)'>Diabetes</button>
+                    <button class='B2 btn btn-light' id='1conds3' value='Hypertension: (Explanation)'>Hypertension</button>
+                    <button class='B2 btn btn-light' id='1conds4' value='Heart Disease: (Explanation)'>Heart Disease</button>
+                    <button class='B2 btn btn-light' id='1conds5' value='Strokes: (Explanation)'>Strokes</button>
+                    <button class='B2 btn btn-light' id='1conds6' value='Lung Disease: (Explanation)'>Lung Disease</button>
+                    <button class='B2 btn btn-light' id='1conds7' value='Ear/Sinus Problems: (Explanation)'>Ear/Sinus Problems</button>
+                    <button class='B2 btn btn-light' id='1conds8' value='Muscular/Skeletal Condition: (Explanation)'>Muscular/Skeletal Condition</button>
+                    <button class='B2 btn btn-light' id='1conds9' value='Mentral Problems: (Explanation)'>Mentral Problems (Women)</button>
+                    <button class='B2 btn btn-light' id='1conds10' value='Psychiatric/Emotional Difficulties: (Explanation)'>Psychiatric/Emotional Difficulties</button>
+                    <button class='B2 btn btn-light' id='1conds11' value='Behavioral Disorders: (Explanation)'>Behavioral Disorders</button>
+                    <button class='B2 btn btn-light' id='1conds12' value='Bleeding Disorders: (Explanation)'>Bleeding Disorders</button>
+                    <button class='B2 btn btn-light' id='1conds13' value='Faint Spells: (Explanation)'>Faint Spells</button>
+                    <button class='B2 btn btn-light' id='1conds14' value='Thyroid Disease: (Explanation)'>Thyroid Disease</button>
+                    <button class='B2 btn btn-light' id='1conds15' value='Kidney Disease: (Explanation)'>Kidney Disease</button>
+                    <button class='B2 btn btn-light' id='1conds16' value='Sickle Cell Disease: (Explanation)'>Sickle Cell Disease</button>
+                    <button class='B2 btn btn-light' id='1conds17' value='Seizures: (Explanation)'>Seizures</button>
+                    <button class='B2 btn btn-light' id='1conds18' value='Sleep Disorders: (Explanation)'>Sleep Disorders</button>
+                    <button class='B2 btn btn-light' id='1conds19' value='Abdominal/Digestive Problems: (Explanation)'>Abdominal/Digestive Problems</button>
+                    <button class='B2 btn btn-light' id='1conds20' value='Surgery: (Explanation)'>Surgery</button>
+                    <button class='B2 btn btn-light' id='1conds21' value='Serious Injury: (Explanation)'>Serious Injury</button>
+                    <button class='B2 btn btn-light' id='1conds22' value='Other: (Explanation)'>Other</button>
+                    <textarea contenteditable="true" id="update_conditions" type="text"></textarea>
+                </div>
+
+                <div id='immunizationsDiv2'>
+                    <h4>Immunization Information</h4>
+                    <button class='I2 btn btn-light' id='1imm' value='Tetanus (MM/DD/YYYY)'>Tetanus</button>
+                    <button class='I2 btn btn-light' id='1imm2' value='Pertussis (MM/DD/YYYY)'>Pertussis</button>
+                    <button class='I2 btn btn-light' id='1imm3' value='Diphtheria (MM/DD/YYYY)'>Diphtheria</button>
+                    <button class='I2 btn btn-light' id='1imm4' value='Measles (MM/DD/YYYY)'>Measles</button>
+                    <button class='I2 btn btn-light' id='1imm5' value='Mumps (MM/DD/YYYY)'>Mumps</button>
+                    <button class='I2 btn btn-light' id='1imm6' value='Rubella (MM/DD/YYYY)'>Rubella</button>
+                    <button class='I2 btn btn-light' id='1imm7' value='Polio (MM/DD/YYYY)'>Polio</button>
+                    <button class='I2 btn btn-light' id='1imm8' value='Chicken Pox (MM/DD/YYYY)'>Chicken Pox</button>
+                    <button class='I2 btn btn-light' id='1imm9' value='Hepatitis A (MM/DD/YYYY)'>Hepatitis A</button>
+                    <button class='I2 btn btn-light' id='1imm10' value='Hepatitis B (MM/DD/YYYY)'>Hepatitis B</button>
+                    <button class='I2 btn btn-light' id='1imm11' value='Influenza (MM/DD/YYYY)'>Influenza</button>
+                    <button class='I2 btn btn-light' id='1imm12' value='Other: (MM/DD/YYYY)'>Other</button>
+                    <textarea contenteditable="true" id="update_immunizations" type="text"></textarea>
+                </div>
+
+                <div id='meds2'>
+                    <h4>Medications and Allergies</h4>
+
+                    <div class='med2'>
+                        <button id='M2' class='M2 btn btn-light' Value='(Medication): (Strength)(Frequency)(Reason)(Start Date: MM/DD/YYYY)'>Add Current Medication</button>
+                        <button id='A2' class='A2 btn btn-light' Value='Allergies: '>Add Allergies</button>
+                        <textarea contenteditable="true" id="update_medications" type="text"></textarea>
+                        <button class='btn btn-light'id="updateRecord">Update your Record</button>
+                    </div>
+
+                    <br>
+
+                </div>
+            </div>
+
+            <div class="col-xl-4">
+                <div id="updateTransactions">
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
